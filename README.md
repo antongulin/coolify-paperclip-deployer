@@ -54,8 +54,7 @@ coolify-paperclip-deployer/
     ├── SKILL.md                 ← The OpenCode skill (what the agent reads)
     ├── benchmark.json           ← Quantitative evaluation results
     └── evals/
-        ├── evals.json           ← Test prompts & assertions
-        └── trigger-evals.json   ← Trigger-optimization queries
+        └── evals.json           ← Test prompts & assertions
 ```
 
 ## Why a "skill" matters
