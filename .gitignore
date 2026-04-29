@@ -1,0 +1,8 @@
+# Ignore local workspace artifacts and temporary files
+iteration-1/
+iteration-2/
+iteration-3/
+*.tmp
+.DS_Store
+node_modules/
+__pycache__/

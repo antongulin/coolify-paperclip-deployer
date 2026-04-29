@@ -1,0 +1,109 @@
+{
+  "skill_name": "paperclip-coolify-deployer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a Coolify server at IP YOUR_SERVER_IP. I want to deploy Paperclip on it. Can you walk me through it?",
+      "expected_output": "The agent should guide through all 8 phases: discover infra, create project/app, config env vars, storage, fix permissions, deploy, and onboard. It should mention using branch 'master' not 'main', generating BETTER_AUTH_SECRET, using /paperclip mount, and disabling health check.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Agent mentions 'master' branch, not 'main'",
+          "check": "content",
+          "target": "master"
+        },
+        {
+          "text": "Agent mentions PAPERCLIP_PUBLIC_URL env var",
+          "check": "content",
+          "target": "PAPERCLIP_PUBLIC_URL"
+        },
+        {
+          "text": "Agent mentions BETTER_AUTH_SECRET generation",
+          "check": "content",
+          "target": "BETTER_AUTH_SECRET"
+        },
+        {
+          "text": "Agent mentions persistent storage /paperclip mount",
+          "check": "content",
+          "target": "/paperclip"
+        },
+        {
+          "text": "Agent mentions disabling health check",
+          "check": "content",
+          "target": "health check"
+        },
+        {
+          "text": "Agent mentions fixing volume permissions (chown 1000:1000)",
+          "check": "content",
+          "target": "chown"
+        },
+        {
+          "text": "Agent mentions onboarding command: docker exec ... paperclipai onboard",
+          "check": "content",
+          "target": "onboard"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Deploy Paperclip AI orchestration platform on Coolify. My Coolify is already running. I need the full setup.",
+      "expected_output": "The agent should provide a complete end-to-end deployment plan using the Coolify MCP tools where possible, and exact SSH commands where needed. It should cover all known gotchas from the skill.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Agent mentions 'master' branch, not 'main'",
+          "check": "content",
+          "target": "master"
+        },
+        {
+          "text": "Agent mentions using Coolify tools (coolify_projects, coolify_application, coolify_deploy)",
+          "check": "content",
+          "target": "coolify_"
+        },
+        {
+          "text": "Agent mentions PAPERCLIP_ALLOWED_HOSTNAMES",
+          "check": "content",
+          "target": "PAPERCLIP_ALLOWED_HOSTNAMES"
+        },
+        {
+          "text": "Agent mentions running docker exec for onboarding",
+          "check": "content",
+          "target": "docker exec"
+        },
+        {
+          "text": "Agent provides exact commands (chown, chmod, docker exec, onboard)",
+          "check": "content",
+          "target": "chown -R 1000:1000"
+        },
+        {
+          "text": "Agent mentions getting the CEO invite URL",
+          "check": "content",
+          "target": "invite URL"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I tried deploying Paperclip on Coolify but got an error: 'fatal: Remote branch main not found in upstream origin'. How do I fix this?",
+      "expected_output": "The agent should immediately identify this error as coming from branch 'main' instead of 'master' and provide the exact fix: change branch to 'master' and redeploy.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Agent identifies wrong branch 'main' as cause",
+          "check": "content",
+          "target": "main"
+        },
+        {
+          "text": "Agent provides fix: change to 'master' branch",
+          "check": "content",
+          "target": "master"
+        },
+        {
+          "text": "Agent mentions redeploying after fix",
+          "check": "content",
+          "target": "redeploy"
+        }
+      ]
+    }
+  ]
+}
