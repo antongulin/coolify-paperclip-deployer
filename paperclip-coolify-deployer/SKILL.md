@@ -3,6 +3,8 @@ name: paperclip-coolify-deployer
 description: "Deploy and self-host Paperclip — the open-source AI agent orchestration dashboard — on Coolify v4. Use this skill immediately whenever the user mentions Paperclip, wants to install or run an AI company/org-chart management tool, deploy an agent orchestration platform, or get Paperclip working on their VPS/self-hosted server. Trigger for any combination of \"Paperclip\" + \"Coolify\" / \"VPS\" / \"Docker\" / \"self-hosted\" / \"deploy\" / \"install\". Also use when the user gets deployment errors like \"Remote branch main not found\" or \"EACCES permission denied\" while deploying Paperclip. This skill provides the complete step-by-step workflow: from Coolify project creation, through the critical `master` branch (not `main`) gotcha, environment variable setup, `/paperclip` persistent volume mount, permission fixes (chown 1000:1000), health check configuration, deployment, and post-deploy onboarding (CEO invite URL)."
 ---
 
+> **Author**: Anton Gulin · **Tool**: [opencode-skill-creator](https://github.com/antongulin/opencode-skill-creator) · **GitHub**: [@antongulin](https://github.com/antongulin) · **Registry**: [skills.sh](https://www.skills.sh/docs)
+
 # Paperclip Coolify Deployer
 
 Deploy Paperclip on a self-hosted Coolify v4 server.

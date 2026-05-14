@@ -1,5 +1,8 @@
 # Coolify Paperclip Deployer
 
+[![skills.sh](https://skills.sh/b/antongulin/coolify-paperclip-deployer)](https://skills.sh/antongulin/coolify-paperclip-deployer)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
+
 > One-line AI agent prompt to deploy Paperclip on Coolify — fully automated and battle-tested.
 
 ## What is this?
