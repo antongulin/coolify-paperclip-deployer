@@ -6,3 +6,6 @@ iteration-3/
 .DS_Store
 node_modules/
 __pycache__/
+
+# CodeGraph local index and daemon state; the MCP config files are committed.
+.codegraph/

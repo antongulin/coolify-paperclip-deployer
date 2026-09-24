@@ -1,0 +1,6 @@
+[mcp_servers.codegraph]
+command = "codegraph"
+args = ["serve", "--mcp"]
+
+[mcp_servers.codegraph.env]
+CODEGRAPH_TELEMETRY = "0"
