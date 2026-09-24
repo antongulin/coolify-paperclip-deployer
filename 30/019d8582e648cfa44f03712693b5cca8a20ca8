@@ -1,0 +1,29 @@
+.codex/config.toml
+  s_2bed04a1b6c642::t_13e3f46edd4767 1-6
+.cursor/mcp.json
+  s_2bed04a1b6c642::t_58ae3b60ba9a17 1-12
+.gitignore
+  s_2bed04a1b6c642::t_8b5ab38c9baaf4 9-11
+.mcp.json
+  s_2bed04a1b6c642::t_81a4d11cd0ee23 1-12
+.vscode/mcp.json
+  s_2bed04a1b6c642::t_8bec4d68044816 1-12
+opencode.jsonc
+  s_2bed04a1b6c642::t_705ce7a7eb08fe 1-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "30019d8582e648cfa44f03712693b5cca8a20ca8",
+  "prompts": {},
+  "sessions": {
+    "s_2bed04a1b6c642": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f2c78c1fbffeoMa3Pd0HzIi9l2",
+        "model": "deepseek-v4.1-flash"
+      },
+      "human_author": "Anton Gulin <anton@boostbusiness.ai>"
+    }
+  }
+}
